@@ -1,0 +1,10 @@
+/* Basic styling for the Student Book Exchange project.
+   The idea is to keep the CSS minimal and let Bootstrap handle most layout. */
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+main.container {
+    min-height: 70vh;
+}
