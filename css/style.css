@@ -19,3 +19,8 @@ main.container {
 .book-card .card-footer {
     background-color: #f8f9fa;
 }
+
+/* Reviews formatting */
+.card.review-card {
+    border-left: 4px solid #0d6efd;
+}
