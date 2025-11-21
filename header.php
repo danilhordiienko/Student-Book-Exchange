@@ -44,7 +44,9 @@ if (session_status() === PHP_SESSION_NONE) {
                 <li class="nav-item"><a class="nav-link" href="books.php">Books</a></li>
                 <li class="nav-item"><a class="nav-link" href="merch.php">Merch</a></li>
                 <li class="nav-item"><a class="nav-link" href="reviews.php">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="checkout.php">Checkout</a></li>
             </ul>
+
 
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <?php if (!empty($_SESSION['user_id'])): ?>
