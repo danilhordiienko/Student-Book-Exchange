@@ -8,3 +8,14 @@ body {
 main.container {
     min-height: 70vh;
 }
+
+/* Simple styling for cards on books and merch pages. */
+
+.book-card .card-title,
+.merch-card .card-title {
+    font-weight: 600;
+}
+
+.book-card .card-footer {
+    background-color: #f8f9fa;
+}
