@@ -51,19 +51,29 @@ try {
                 <div class="card-body">
                     <h5 class="card-title mb-2">
                         <?= htmlspecialchars($item['name']) ?>
-                    </h5>
+                            </h5>
+
                     <?php if (!empty($item['description'])): ?>
                         <p class="card-text small mb-2">
-                            <?= nl2br(htmlspecialchars($item['description'])) ?>
-                        </p>
+                    <?= nl2br(htmlspecialchars($item['description'])) ?>
+                    </p>
                     <?php endif; ?>
+
                     <p class="card-text fw-semibold mb-1">
-                        Price:
-                        €<?= number_format($item['price_cents'] / 100, 2) ?>
+                    Price:
+                    €<?= number_format($item['price_cents'] / 100, 2) ?>
                     </p>
-                    <p class="card-text small text-muted mb-0">
-                        In stock: <?= (int)$item['stock_qty'] ?>
+                    <p class="card-text small text-muted mb-2">
+                    In stock: <?= (int)$item['stock_qty'] ?>
                     </p>
+
+                        <form method="post" action="checkout.php" class="mt-2">
+                            <input type="hidden" name="action" value="add">
+                            <input type="hidden" name="merch_id" value="<?= $item['id'] ?>">
+                                <button type="submit" class="btn btn-sm btn-success">
+                                Add to cart
+                                </button>
+                        </form>
                 </div>
                 <button
                     class="btn btn-outline-primary btn-sm mt-2"
