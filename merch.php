@@ -65,6 +65,11 @@ try {
                         In stock: <?= (int)$item['stock_qty'] ?>
                     </p>
                 </div>
+                <button
+                    class="btn btn-outline-primary btn-sm mt-2"
+                    onclick="addFavourite('merch', <?= $item['id'] ?>)">
+                    Add to favourites
+                </button>
             </div>
         </div>
     <?php endforeach; ?>

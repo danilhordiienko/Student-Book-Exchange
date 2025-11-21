@@ -77,6 +77,11 @@ try {
                     Listed by
                     <?= htmlspecialchars($book['first_name'] . ' ' . $book['last_name']) ?>
                 </div>
+                <button
+                    class="btn btn-outline-primary btn-sm mt-2"
+                    onclick="addFavourite('book', <?= $book['id'] ?>)">
+                    Add to favourites
+                </button>
             </div>
         </div>
     <?php endforeach; ?>
