@@ -48,6 +48,11 @@ if (session_status() === PHP_SESSION_NONE) {
 
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <?php if (!empty($_SESSION['user_id'])): ?>
+                    <li class="nav-item me-2">
+                        <span class="navbar-text text-light">
+                            Signed in as <?= htmlspecialchars($_SESSION['first_name'] ?? 'student') ?>
+                        </span>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li>
