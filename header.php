@@ -48,6 +48,7 @@ if (session_status() === PHP_SESSION_NONE) {
             </ul>
 
 
+
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <?php if (!empty($_SESSION['user_id'])): ?>
                     <li class="nav-item me-2">
