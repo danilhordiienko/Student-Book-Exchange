@@ -1,15 +1,16 @@
 /* Basic styling for the Student Book Exchange project.
-   The idea is to keep the CSS minimal and let Bootstrap handle most layout. */
+   Bootstrap handles most of the layout, this file adds light customisation. */
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #f2f4f7;
 }
 
 main.container {
     min-height: 70vh;
 }
 
-/* Simple styling for cards on books and merch pages. */
+/* Cards on books and merch pages */
 
 .book-card .card-title,
 .merch-card .card-title {
@@ -20,7 +21,25 @@ main.container {
     background-color: #f8f9fa;
 }
 
-/* Reviews formatting */
+/* Reviews */
+
 .card.review-card {
     border-left: 4px solid #0d6efd;
+}
+
+/* Navbar and footer */
+
+.navbar-brand {
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+footer {
+    font-size: 0.85rem;
+}
+
+/* Tables on admin and checkout pages */
+
+table.table {
+    background-color: #ffffff;
 }
