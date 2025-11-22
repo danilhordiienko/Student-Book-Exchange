@@ -49,31 +49,32 @@ try {
         <div class="col-md-6 col-lg-4 mb-3">
             <div class="card h-100 shadow-sm merch-card">
                 <div class="card-body">
-                    <h5 class="card-title mb-2">
-                        <?= htmlspecialchars($item['name']) ?>
-                            </h5>
+                    <div class="card-body">
+                        <h5 class="card-title mb-2">
+                            <?= htmlspecialchars($item['name']) ?>
+                        </h5>
 
                     <?php if (!empty($item['description'])): ?>
                         <p class="card-text small mb-2">
                     <?= nl2br(htmlspecialchars($item['description'])) ?>
-                    </p>
+                        </p>
                     <?php endif; ?>
 
-                    <p class="card-text fw-semibold mb-1">
+                <p class="card-text fw-semibold mb-1">
                     Price:
-                    €<?= number_format($item['price_cents'] / 100, 2) ?>
-                    </p>
-                    <p class="card-text small text-muted mb-2">
+                €<?= number_format($item['price_cents'] / 100, 2) ?>
+                </p>
+                <p class="card-text small text-muted mb-2">
                     In stock: <?= (int)$item['stock_qty'] ?>
-                    </p>
-
-                        <form method="post" action="checkout.php" class="mt-2">
-                            <input type="hidden" name="action" value="add">
-                            <input type="hidden" name="merch_id" value="<?= $item['id'] ?>">
-                                <button type="submit" class="btn btn-sm btn-success">
-                                Add to cart
-                                </button>
-                        </form>
+                </p>
+    <form method="post" action="checkout.php" class="mt-2">
+        <input type="hidden" name="action" value="add">
+        <input type="hidden" name="merch_id" value="<?= $item['id'] ?>">
+        <button type="submit" class="btn btn-sm btn-success">
+            Add to cart
+        </button>
+    </form>
+</div>
                 </div>
                 <button
                     class="btn btn-outline-primary btn-sm mt-2"
